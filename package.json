@@ -1,0 +1,28 @@
+{
+  "name": "commerce-framework",
+  "version": "1.0.0",
+  "description": "Next.js Commerce Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vercel/commerce-framework.git"
+  },
+  "keywords": [
+    "nextjs",
+    "commerce"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vercel/commerce-framework/issues"
+  },
+  "homepage": "https://github.com/vercel/commerce-framework#readme",
+  "dependencies": {
+    "@vercel/fetch": "^6.1.0",
+    "js-cookie": "^2.2.1",
+    "swr": "^0.3.8"
+  }
+}
