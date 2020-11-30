@@ -8,9 +8,7 @@ This repository serves as a model to build your own hooks for [Next.js Commerce]
 
 The main configuration provider that creates the Commerce context. Used by all Commerce hooks. Every provider may define its own defaults.
 
-Takes the config values like `locale` and an optional `fetcherRef` object for data fetching.
-
-```js
+```jsx
 import { CommerceProvider } from "@commerce-framework";
 
 const App = ({ locale = "en-US", children }) => (
@@ -40,8 +38,6 @@ May be useful if you want to create another `CommerceProvider` and extend its op
 
 Returns the logged-in customer and its data.
 
-Returns the logged in customer.
-
 ```jsx
 import { useCustomer } from "@commerce-framework/hooks";
 
@@ -58,9 +54,9 @@ The customer is revalidated by operations executed by `useLogin`, `useSignup` an
 
 ### useLogin Hook
 
-Returns a function that allows a visitor to login into his customer account.
+Returns a function that allows a visitor to login into its customer account.
 
-```js
+```jsx
 import { useLogin } from "@commerce-framework/hooks";
 
 const LoginView = () => {
@@ -81,7 +77,7 @@ const LoginView = () => {
 
 Returns a function that allows the current customer to log out.
 
-```js
+```jsx
 import { useLogout } from "@commerce-framework/hooks";
 
 const LogoutLink = () => {
@@ -95,7 +91,7 @@ const LogoutLink = () => {
 Returns a function that allows a visitor to sign up into the store.
 The signup operation returns `null`.
 
-```js
+```jsx
 import { useSignup } from "@commerce-framework/hooks";
 
 const SignupView = () => {
@@ -118,7 +114,7 @@ const SignupView = () => {
 
 Formats an amount--usually the price of a product-- into an internationalized string. It uses the current locale.
 
-```js
+```jsx
 import { usePrice } from "@commerce-framework/hooks";
 
 const { price, basePrice, discount } = usePrice({
@@ -146,32 +142,18 @@ const { price, basePrice, discount } = usePrice({
 
 Returns the current cart data.
 
-```js
+```jsx
 import { useCart } from "@commerce-framework/hooks";
 
-// const { data, error, isEmpty, loading } = useCart()
-
-const countItem = (count: number, item: any) => count + item.quantity;
-const countItems = (count: number, items: any[]) =>
-  items.reduce(countItem, count);
-
-const CartNumber = () => {
-  const { data, isEmpty } = useCart();
-  const itemsCount = Object.values(data?.line_items ?? {}).reduce(
-    countItems,
-    0
-  );
-
-  return itemsCount > 0 && <span>{itemsCount}</span>;
-};
+const { data, error, isEmpty, loading } = useCart();
 ```
 
 ### useAddItem
 
-Returns a function that when called adds a new line item to the current cart.
+Returns a function that when called adds a new item to the current cart.
 The `addItem` operation returns the updated cart.
 
-```js
+```jsx
 import { useAddItem } from "@commerce-framework/hooks";
 
 const AddToCartButton = ({ productId, variantId }) => {
@@ -192,7 +174,7 @@ const AddToCartButton = ({ productId, variantId }) => {
 
 Returns a function to update an item of the current cart.
 
-```js
+```jsx
 const updateItem = useUpdateItem();
 
 await updateItem({
@@ -215,7 +197,7 @@ await updateItem({
 
 Returns a function that when called removes an item from the current cart.
 
-```js
+```jsx
 const removeItem = useRemoveItem();
 
 await removeItem({
@@ -233,7 +215,7 @@ The cart is deleted if the last remaining item is removed.
 
 Returns the current wishlist of the logged in user.
 
-```js
+```jsx
 import { useWishlist } from "@commerce-framework/hooks";
 
 const { data } = useWishlist();
