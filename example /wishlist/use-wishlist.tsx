@@ -1,8 +1,8 @@
-import { HookFetcher } from '.././commerce/utils/types'
-import { SwrOptions } from '.././commerce/utils/use-data'
-import useCommerceWishlist from '.././commerce/wishlist/use-wishlist'
+import { HookFetcher } from '../src/utils/types'
+import { SwrOptions } from '../src/utils/use-data'
+import useCommerceWishlist from '../src/wishlist/use-wishlist'
 import type { Wishlist } from '../api/wishlist'
-import useCustomer from '../use-customer'
+import useCustomer from '../account/use-customer'
 
 const defaultOpts = {
   url: '/api/bigcommerce/wishlist',

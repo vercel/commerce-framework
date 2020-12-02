@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
-import type { HookFetcher } from './commerce/utils/types'
-import useCommerceLogout from './commerce/use-logout'
-import useCustomer from './use-customer'
+import type { HookFetcher } from '../src/utils/types'
+import useCommerceLogout from '../src/use-logout'
+import useCustomer from '../account/use-customer'
 
 const defaultOpts = {
   url: '/api/bigcommerce/customers/logout',

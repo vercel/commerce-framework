@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
-import { HookFetcher } from '.././commerce/utils/types'
-import { CommerceError } from '.././commerce/utils/errors'
-import useWishlistAddItem from '.././commerce/wishlist/use-add-item'
+import { HookFetcher } from '../src/utils/types'
+import { CommerceError } from '../src/utils/errors'
+import useWishlistAddItem from '../src/wishlist/use-add-item'
 import type { ItemBody, AddItemBody } from '../api/wishlist'
-import useCustomer from '../use-customer'
+import useCustomer from '../account/use-customer'
 import useWishlist, { UseWishlistOptions, Wishlist } from './use-wishlist'
 
 const defaultOpts = {

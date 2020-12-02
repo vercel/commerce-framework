@@ -1,7 +1,7 @@
-import type { HookFetcher } from './commerce/utils/types'
-import type { SwrOptions } from './commerce/utils/use-data'
-import useCommerceCustomer from './commerce/use-customer'
-import type { Customer, CustomerData } from './api/customers'
+import type { HookFetcher } from '../src/utils/types'
+import type { SwrOptions } from '../src/utils/use-data'
+import useCommerceCustomer from '../src/use-customer'
+import type { Customer, CustomerData } from '../api/customers'
 
 const defaultOpts = {
   url: '/api/bigcommerce/customers',

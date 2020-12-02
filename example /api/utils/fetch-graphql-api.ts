@@ -1,5 +1,5 @@
-import { FetcherError } from '../.././commerce/utils/errors'
-import type { GraphQLFetcher } from '../.././commerce/api'
+import { FetcherError } from '../../src/utils/errors'
+import type { GraphQLFetcher } from '../../src/api'
 import { getConfig } from '..'
 import fetch from './fetch'
 

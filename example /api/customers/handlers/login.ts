@@ -1,4 +1,4 @@
-import { FetcherError } from '../../.././commerce/utils/errors'
+import { FetcherError } from '../../../src/utils/errors'
 import login from '../../operations/login'
 import type { LoginHandlers } from '../login'
 

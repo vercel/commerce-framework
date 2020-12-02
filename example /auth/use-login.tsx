@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
-import type { HookFetcher } from './commerce/utils/types'
-import { CommerceError } from './commerce/utils/errors'
-import useCommerceLogin from './commerce/use-login'
-import type { LoginBody } from './api/customers/login'
-import useCustomer from './use-customer'
+import type { HookFetcher } from '../src/utils/types'
+import { CommerceError } from '../src/utils/errors'
+import useCommerceLogin from '../src/use-login'
+import type { LoginBody } from '../api/customers/login'
+import useCustomer from '../account/use-customer'
 
 const defaultOpts = {
   url: '/api/bigcommerce/customers/login',

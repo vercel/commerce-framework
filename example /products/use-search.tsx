@@ -1,6 +1,6 @@
-import type { HookFetcher } from '.././commerce/utils/types'
-import type { SwrOptions } from '.././commerce/utils/use-data'
-import useCommerceSearch from '.././commerce/products/use-search'
+import type { HookFetcher } from '../src/utils/types'
+import type { SwrOptions } from '../src/utils/use-data'
+import useCommerceSearch from '../src/products/use-search'
 import type { SearchProductsData } from '../api/catalog/products'
 
 const defaultOpts = {
