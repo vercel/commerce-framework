@@ -331,3 +331,9 @@ The fetcher function receives the following arguments:
 - `options:` This is an object that may have a `query` (if the hook is using GraphQL), a `url`, and a `method`.
 - `input:` An object with the data that's required to execute the operation.
 - `fetch:` The fetch function that is set by the `CommerceProvider`.
+
+## Folder Structure
+
+The root folder contains an `index.tsx` file with the CommerceProvider to set up the right commerce context. Additional components needed to run the framework need to be there.
+
+`src` contains all the handlers used by the whole framework. The rest of the folders in the root file are named by functionality, e.g cart, auth, wishlist and are the API of the framework. Therefore, most of the work should be done in the `src` folder. Otherwise, it could affect the usage of the framework altering its functionality and possibly adding unexpected output.
