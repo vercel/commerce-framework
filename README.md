@@ -2,7 +2,13 @@
 
 This repository serves as a model to build your own hooks for [Next.js Commerce](https://nextjs.org/commerce). We encourage contributors and teams to build their own hooks under a separate package with the corresponding configuration. An example of using this repository as a seed are the hooks we built with [BigCommerce](https://github.com/bigcommerce/storefront-data-hooks).
 
-## Proposed Commerce API
+## Folder Structure
+
+The root folder contains an `index.tsx` file with the CommerceProvider to set up the right commerce context. Additional components needed to run the framework need to be there.
+
+`src` contains all the handlers used by the whole framework. The rest of the folders in the root file are named by functionality, e.g cart, auth, wishlist and are the API of the framework. Therefore, most of the work should be done in the `src` folder. Otherwise, it could affect the usage of the framework altering its functionality and possibly adding unexpected output.
+
+## Commerce API
 
 ### CommerceProvider
 
@@ -332,8 +338,4 @@ The fetcher function receives the following arguments:
 - `input:` An object with the data that's required to execute the operation.
 - `fetch:` The fetch function that is set by the `CommerceProvider`.
 
-## Folder Structure
 
-The root folder contains an `index.tsx` file with the CommerceProvider to set up the right commerce context. Additional components needed to run the framework need to be there.
-
-`src` contains all the handlers used by the whole framework. The rest of the folders in the root file are named by functionality, e.g cart, auth, wishlist and are the API of the framework. Therefore, most of the work should be done in the `src` folder. Otherwise, it could affect the usage of the framework altering its functionality and possibly adding unexpected output.
