@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/vercel/commerce-framework#readme",
   "dependencies": {
+    "@types/lodash.debounce": "^4.0.6",
     "@vercel/fetch": "^6.1.0",
     "js-cookie": "^2.2.1",
     "swr": "^0.3.8"
