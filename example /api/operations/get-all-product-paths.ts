@@ -7,7 +7,7 @@ import filterEdges from '../utils/filter-edges'
 import { BigcommerceConfig, getConfig } from '..'
 
 export const getAllProductPathsQuery = /* GraphQL */ `
-  query getAllProductPaths($first: Int = 100) {
+  query getAllProductPaths($first: Int = 50) {
     site {
       products(first: $first) {
         edges {
